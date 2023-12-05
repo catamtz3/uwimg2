@@ -20,6 +20,7 @@ def process_images_saturation():
     clamp_image(im)
     hsv_to_rgb(im)
     save_image(im, "swatch_saturated")
+    print("TESTING SAT")
 
     return send_file('swatch_saturated.jpg')
 
@@ -34,6 +35,7 @@ def process_images_bw():
     im = load_image("testing.jpeg")
     im = rgb_to_grayscale(im)
     save_image(im, "swatch_bw")
+    print("TESTING bw")
 
     return send_file('swatch_bw.jpg')
 

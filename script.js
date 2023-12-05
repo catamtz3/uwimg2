@@ -18,29 +18,29 @@ document.getElementById('imageInput').addEventListener('change', function(event)
     }
   })
   .then(blob => {
-    image1.src = URL.createObjectURL(blob);;
+    image1.src = URL.createObjectURL(blob);
+
+    fetch('http://127.0.0.1:5000/process_image2', {
+      method: 'POST',
+      body: formData
+    })
+    .then(response => {
+      if (response.ok) {
+        return response.blob();
+      } else {
+        throw new Error('Network response was not ok.');
+      }
+    })
+    .then(blob => {
+      image2.src = URL.createObjectURL(blob);;
+    })
+
   })
   .catch(error => {
     console.error('There was an error processing the image:', error);
   });
 
   //Black and white
-  fetch('http://127.0.0.1:5000/process_image2', {
-    method: 'POST',
-    body: formData
-  })
-  .then(response => {
-    if (response.ok) {
-      return response.blob();
-    } else {
-      throw new Error('Network response was not ok.');
-    }
-  })
-  .then(blob => {
-    image2.src = URL.createObjectURL(blob);;
-  })
-  .catch(error => {
-    console.error('There was an error processing the image:', error);
-  });
+
 
 });
