@@ -24,13 +24,18 @@ body {
   color: #333;
 }
 
+.complexion-cupid {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
 .about-us {
   padding: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  /* min-height: 100vh; */
 }
 
 .creators-container {
