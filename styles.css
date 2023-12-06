@@ -3,95 +3,98 @@
   --highlight: #faeee3;
   --bg:  #f8f5f2;
   --header: #720026;
-  --hover: #f4978e;
+  --hover: #ffead6;
 }
 
 header {
-    background-color: var(--highlight);
-    color: var(--header);
-    padding: 20px 0;
-    display: flex;
+  background-color: var(--highlight);
+  color: var(--header);
+  padding: 20px 0;
+  display: flex;
   align-items: center;
-  }
-  
-  h1 {
-    font-family: 'Allison';
-    display: inline-block;
-    font-size: 24px;
-    font-weight: bold;
-  }
-  
-  nav {
-    float: none;
-  }
-  
-  nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 10px 15px;
-  }
-  
-  nav li {
-    display: inline-block; 
-    margin-left: 20px;
-  }
-  
-  nav a {
-    color: #333;
-    text-decoration: none;
-    padding: 10px 15px; 
+}
 
-  }
-  
-  nav a:hover {
-    font-weight: bold;
-    color: var(--header);
-    background-color: rgb(255, 234, 214);
-  }
+body {
+  font-family: 'Open Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: #333;
+}
+
+h1 {
+  font-family: 'Allison', sans-serif;
+  font-size: 24px;
+  font-weight: bold;
+  margin: 0;
+}
+
+nav {
+  margin-left: auto;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+nav li {
+  margin-left: 20px;
+}
+
+nav a {
+  color: var(--maincolor);
+  text-decoration: none;
+  padding: 10px 15px;
+
+}
+
+nav a:hover {
+  font-weight: bold;
+  color: var(--header);
+  background-color: var(--hover);
+}
 
 
 main {
-    padding: 40px 0;
-  }
+  /* padding: 40px 0; */
+  padding: 40px 20px;
+}
 
-  body {
-    font-family: 'Open Sans', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: var(--bg);
-  }
-  
-  a {
-    color: #007bff;
-    text-decoration: none;
-  }
-  
+a {
+  color: #007bff;
+  text-decoration: none;
+} */
 
-  h2, h3, h4, h5, h6 {
-    font-weight: 600;
-    color: var(--header);
-  }
-  
-  img {
-    max-width: 100%;
-    height: auto;
-  }
-  
-  .container {
-    max-width: 1140px;
-    margin: 0 auto;
-    padding: 0 20px;
-  }
 
-  #uploadImage {
-    margin-left: 10px;
-  }
-  
+h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  color: var(--header);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  /* padding: 0 20px; */
+}
+
+#uploadImage {
+  margin-left: 10px;
+}
+
 
 footer {
-  background-color:  #faeee3;
+  /* background-color:  #faeee3; */
+  background-color: var(--highlight);
   padding: 20px 0;
   text-align: center;
+  color: var(--maincolor);
 }
 
 footer p {
