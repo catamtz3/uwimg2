@@ -47,7 +47,6 @@ nav a {
   color: var(--maincolor);
   text-decoration: none;
   padding: 10px 15px;
-
 }
 
 nav a:hover {
@@ -56,9 +55,7 @@ nav a:hover {
   background-color: var(--hover);
 }
 
-
 main {
-  /* padding: 40px 0; */
   padding: 40px 20px;
 }
 
@@ -81,16 +78,13 @@ img {
 .container {
   max-width: 1140px;
   margin: 0 auto;
-  /* padding: 0 20px; */
 }
 
 #uploadImage {
   margin-left: 10px;
 }
 
-
 footer {
-  /* background-color:  #faeee3; */
   background-color: var(--highlight);
   padding: 20px 0;
   text-align: center;
