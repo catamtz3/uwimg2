@@ -51,8 +51,8 @@ body {
 }
 
 .creator img {
-  max-width: 100%;
-  height: auto;
+  max-width: 170px;
+  max-height: 170px;
   border-radius: 50%;
 }
 
