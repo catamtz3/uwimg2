@@ -23,6 +23,7 @@ export default class Predict extends Component {
         const {loading, foundation} = this.props;
         
         return (
+          <section>
             <div className="predict-model">
                 <div className="predict-results">
                   <h2>Prediction Results</h2>
@@ -42,6 +43,7 @@ export default class Predict extends Component {
                     }
                 </div>
           </div>
+          </section>
         );
     }
 }

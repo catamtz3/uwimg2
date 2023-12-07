@@ -3,6 +3,7 @@ import '../scss/header.scss';
 
 const Header = props => {
     return (
+        <section>
        <div> 
         <h2>Upload Image</h2>
         <strong>Example of image to upload:</strong>
@@ -23,6 +24,7 @@ const Header = props => {
             <li>Make sure your hair is pulled back or out of your face</li>
         </ul>
         </div>
+        </section>
     );
 }
 

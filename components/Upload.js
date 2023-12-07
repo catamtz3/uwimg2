@@ -117,6 +117,7 @@ export default class Upload extends Component {
         const {loading, rgb} = this.props;
         const [r, g, b] = rgb;
         return (
+            <section>
             <div className="upload">
                 <div ref={this.measure} className="measure"></div>
                 <div ref={this.canvasContainer} className="canvas-container">
@@ -137,6 +138,7 @@ export default class Upload extends Component {
                     <input type="file" className="upload-button" id="upload-button" onChange={evt => this.uploadImage(evt)} />
                 </div>
             </div>
+            </section>
         );
     }
 }

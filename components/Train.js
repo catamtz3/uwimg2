@@ -210,19 +210,18 @@ export default class Train extends Component {
     const {loading, currentEpoch, lossResult, epochs, units, batchSize, learningRate, foundation, rgb} = this.state;
     const progress = (currentEpoch / epochs) * 100;
     return (
+    <section>
     <div>
   	  <div className="divider"></div>
       <div className="train-results">
-        <h2>Training Results</h2>
-        <div className="train-result">
-          <span>{loading ? `Done training, proceed!` : `Training model...  ${progress.toFixed(2)}% complete`}</span>
-        </div>
+        <h2>Training Results: {progress.toFixed(2)}% complete</h2>
       </div>
       <div className="divider"></div>
       <Upload loading={loading} rgb={rgb} setRGB={this.setRGB} />
       <div className="divider"></div>
       <Predict loading={loading} rgb={rgb} model={model} foundation={foundation} foundationLabels={foundationLabels} setFoundation={this.setFoundation} />
     </div>
+    </section>
     );
   }
 }
