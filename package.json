@@ -1,0 +1,50 @@
+{
+  "name": "TensorShade",
+  "version": "1.0.0",
+  "description": "A machine learning app that uses Tensorflow, React, and Parcel to best match makeup foundation shades from various beauty brands to images of skin tones.",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "parcel index.html",
+    "watch": "parcel watch index.html",
+    "build": "parcel build index.html --out-dir public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KaylaKremer/TensorShade.git"
+  },
+  "author": "Kayla Kremer",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/KaylaKremer/TensorShade/issues"
+  },
+  "homepage": "https://github.com/KaylaKremer/TensorShade#readme",
+  "devDependencies": {
+    "@babel/core": "^7.23.5",
+    "@babel/plugin-proposal-class-properties": "^7.18.6",
+    "@babel/plugin-transform-runtime": "^7.4.4",
+    "@babel/preset-env": "^7.23.5",
+    "@babel/preset-react": "^7.23.3",
+    "mem": ">=4.0.0",
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.21.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.4.5",
+    "@tensorflow/tfjs": "^1.1.2",
+    "@tensorflow/tfjs-vis": "^1.1.0",
+    "babel-polyfill": "^6.26.0",
+    "mem": ">=4.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6"
+  },
+  "keywords": [
+    "Tensorflow",
+    "React",
+    "Parcel",
+    "machine",
+    "learning",
+    "ML",
+    "AI"
+  ]
+}

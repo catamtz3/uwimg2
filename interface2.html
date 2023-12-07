@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="script.js" defer></script>
     <link rel="stylesheet" type="text/css" href="styles.css" />
     <title>Complexion Cupid</title>
 </head>
 
 <body>
-
     <header>
         <h1>Complexion Cupid</h1>
         <nav>
@@ -19,44 +19,10 @@
             <a href="assignment.html">Assignment Details</a>
         </nav>
     </header>
-
-    <section>
-
-        <h2>Upload Image</h3>
-
-        <strong>Example of image to upload:</strong>
-        <ul>
-            <li>A high-quality, well-lit selfie or portrait photo</li>
-            <li>A close-up image of your cheek or neck, showing the texture and color of your skin</li>
-        </ul>
-
-        <strong>Good lighting:</strong>
-        <ul>
-            <li>Use natural light whenever possible, make sure it is diffused and even</li>
-            <li>Avoid harsh shadows</li>
-        </ul>
-
-        <strong>Side profile zoomed in of cheek or neck:</strong>
-        <ul>
-            <li>This will help to see your skin texture and color more clearly</li>
-            <li>Make sure your hair is pulled back or out of your face</li>
-        </ul>
-
-        <form action="#" method="post" enctype="multipart/form-data">
-            <label aria-label="imageInput" for="imageInput">Choose an image:</label>
-            <input type="file" id="imageInput" name="image" accept="image/*">
-            <br>
-            <input type="submit" value="Upload Image">
-        </form>
-
-        <!-- Display the uploaded image -->
-        <h2>Uploaded Image Preview</h2>
-        <img id="imagePreview" src="#" alt="User uploaded image" style="max-width: 100%; max-height: 300px;">
-    </section>
-
+    <div id="app"></div>
+    <script src="./App.js"></script>
     <footer>
         <p>&copy; 2023 Complexion Cupid. All rights reserved.</p>
     </footer>
-
 </body>
 </html>
