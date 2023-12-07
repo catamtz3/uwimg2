@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import shadesData from '../data/shades.json';
+import shadesData from '../data1/shades.json';
 import * as tf from '@tensorflow/tfjs';
 import Upload from './Upload';
 import Predict from './Predict';
@@ -13,13 +13,19 @@ export default class Train extends Component {
     loading: false,
     currentEpoch: 0,
     lossResult: 0.000,
-    epochs: 25,
+    epochs: 20,
     units: 20,
-    batchSize: 32,
-    learningRate: 0.25,
+    batchSize: 64,
+    learningRate: 1.0,
     foundation: 'None',
     rgb: []
   });
+
+  constructor(props) {
+    super(props);
+    // Call the training method directly in the constructor
+    this.trainModel();
+  }
   
   //Converts hexadecimal values to RGB color values
   hexToRgb = (hex) => {
@@ -155,20 +161,6 @@ export default class Train extends Component {
     .then(results => console.log('results', results));
   };
   
-  // Reset state to default values
-  resetModel = () => {
-    this.setState({
-      loading: false,
-      currentEpoch: 0,
-      lossResult: 0.000,
-      epochs: 25,
-      batchSize: 32,
-      units: 20,
-      learningRate: 0.25,
-      foundation: 'None'
-    });
-  };
-  
   // Update state with values the user has entered. 
   // If the user tries to use a non-number input or an empty input, set state back to the default values.
   updateValue = evt => {
@@ -216,62 +208,14 @@ export default class Train extends Component {
   // Render training model results
   render() {
     const {loading, currentEpoch, lossResult, epochs, units, batchSize, learningRate, foundation, rgb} = this.state;
+    const progress = (currentEpoch / epochs) * 100;
     return (
     <div>
   	  <div className="divider"></div>
       <div className="train-results">
         <h2>Training Results</h2>
         <div className="train-result">
-          <span>Epoch:</span>
-          <span>{currentEpoch}</span>
-        </div>
-        <div className="train-result">
-          <span>Loss:</span>
-          <span>{lossResult}</span>
-        </div>
-      </div>
-      <div className="train-inputs">
-        <div className="input-group">
-          <div className="input-container">
-            <label className="label" htmlFor="epochs">Epochs</label>
-            <input type="text" name="epochs" className="input" id="epochs" value={epochs} onFocus={evt => this.clearValue(evt)} onBlur={evt => this.getValue(evt)} onChange={evt => this.updateValue(evt)}></input>
-          </div>
-          <div className="input-container">
-            <label className="label" htmlFor="units">Units</label>
-            <input type="text" name="units" className="input" id="units" value={units} onFocus={evt => this.clearValue(evt)} onBlur={evt => this.getValue(evt)} onChange={evt => this.updateValue(evt)}></input>
-          </div>
-        </div>
-        <div className="input-group">
-          <div className="input-container">
-            <label className="label" htmlFor="batch-size">Batch Size</label>
-            <input type="text" name="batchSize" className="input" id="batch-size" value={batchSize} onFocus={evt => this.clearValue(evt)} onBlur={evt => this.getValue(evt)} onChange={evt => this.updateValue(evt)}></input>
-          </div>
-          <div className="input-container">
-            <label className="label" htmlFor="learning-rate">Learning Rate</label>
-            <input type="text" name="learningRate" className="input" id="learning-rate" value={learningRate} onFocus={evt => this.clearValue(evt)} onBlur={evt => this.getValue(evt)} onChange={evt => this.updateValue(evt)}></input>
-          </div>
-        </div>
-      </div>
-      <div className="train-model">
-        <div className={`train-model-button ${loading ? 'disabled' : ''}`} onClick={() => this.trainModel()}>
-          {loading ?
-            <div className="loader">
-              <div className="inner one"></div>
-              <div className="inner two"></div>
-              <div className="inner three"></div>
-            </div>
-          : 'Train Model'
-          }
-        </div>
-        <div className={`train-model-button ${loading ? 'disabled' : ''}`} onClick={() => this.resetModel()}>
-        {loading ?
-            <div className="loader">
-              <div className="inner one"></div>
-              <div className="inner two"></div>
-              <div className="inner three"></div>
-            </div>
-          : 'Reset'
-          }
+          <span>{loading ? `Done training, proceed!` : `Training model...  ${progress.toFixed(2)}% complete`}</span>
         </div>
       </div>
       <div className="divider"></div>

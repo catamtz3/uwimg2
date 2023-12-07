@@ -80,7 +80,7 @@ export default class Upload extends Component {
         const y = evt.offsetY;
         
         // Get the RGBA color value data at the 1px by 1px the user clicked on
-        const imageData = context.getImageData(x, y, 1, 1).data;
+        const imageData = context.getImageData(x, y, 25, 25).data;
         
         // Store the RGBA values in  an array and update state
         const rgb = [...imageData];
@@ -122,7 +122,7 @@ export default class Upload extends Component {
                 <div ref={this.measure} className="measure"></div>
                 <div ref={this.canvasContainer} className="canvas-container">
                     <canvas ref={this.canvas} className="canvas"></canvas>
-                    <img style={{backgroundColor: `${rgb.length > 0 ? `rgba(${r}, ${b}, ${g})` : `#fff`}`}} ref={this.colorPicker} className="color-picker" />
+                    <img style={{backgroundColor: `${rgb.length > 0 ? `rgba(${r}, ${g}, ${b})` : `#fff`}`}} ref={this.colorPicker} className="color-picker" />
                 </div>
                 <div className={`upload-button-container ${loading ? 'disabled' : ''}`}>
                     <label className={`upload-label ${loading ? 'disabled' : ''}`} htmlFor="upload-button">
