@@ -27,7 +27,21 @@ body {
 .complexion-cupid {
   padding: 20px;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.complexion-cupid h2 {
+  color: #720026;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.complexion-cupid p {
+  color: #333;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
 }
 
 .about-us {
@@ -48,6 +62,8 @@ body {
 .creator {
   text-align: center;
   margin: 20px;
+  width: calc(50% - 40px);
+  box-sizing: border-box;
 }
 
 .creator img {
@@ -129,6 +145,7 @@ img {
 .container {
   max-width: 1140px;
   margin: 0 auto;
+  width: 100%;
 }
 
 #uploadImage {
