@@ -44,7 +44,7 @@ body {
   margin-bottom: 15px;
 }
 
-.about-us {
+.meet-us {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -62,8 +62,19 @@ body {
 .creator {
   text-align: center;
   margin: 20px;
+  padding: 30px;
   width: calc(50% - 40px);
   box-sizing: border-box;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.creator h3 {
+  color: #333;
+  font-size: 1.2em;
+  margin-top: 0;
 }
 
 .creator img {
@@ -72,6 +83,9 @@ body {
   border-radius: 50%;
 }
 
+.creator:hover {
+  transform: scale(1.05);
+}
 
 /* Styling for Nav Bar */
 nav {
