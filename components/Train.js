@@ -13,7 +13,7 @@ export default class Train extends Component {
     loading: false,
     currentEpoch: 0,
     lossResult: 0.000,
-    epochs: 20,
+    epochs: 1000,
     units: 20,
     batchSize: 64,
     learningRate: 1.0,
