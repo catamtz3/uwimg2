@@ -46,15 +46,78 @@
         <h2>Related Work</h2>
         <!-- Include 1-3 paragraphs here
         Talk about relevant work that closely connects with your project. -->
-        <p> Current options include requiring an already matching foundation or being able to notice the correct undertone and shade. Through our research we learned of a open source project "TensorShade" on github but the associated web app has issues with contrast and lack of alternative text.</p>
+        <p>
+            As mentioned previously, our project contains two separate features.
+            The first option requires an individual to own a foundation product
+            already. Here, individuals can upload an image of their foundation swatched
+            onto their cheek. As developers, we would take this input image and
+            return two varying images to the individual: a black-and-white filtered
+            image and a highly saturated image. While researching, we found that
+            low-vision and colorblind individuals can utilize these filtered images
+            to understand better and perceive their skin undertones and color depth.
+            Overall, we did not find a makeup tool to make this process instant and
+            seamless for an individual. Instead, these makeup artists would have
+            to manually go through the process twice of turning their original image
+            into the respective filtered images.
+        </p>
+        <p>
+            Our second feature aims to match an individual to a foundation without
+            already owning this product. This process primarily targets individuals
+            new to makeup and are merely getting started with this creative outlet.
+            After researching, we discovered an open-source project called "TensorShade"
+            on GitHub. Overall, this project had functionality very similar to what
+            we were aiming for, specifically in our second feature. For our second
+            feature, we wanted the user to upload an image of their bare skin, where
+            they could select a section on their face that they wanted us to evaluate
+            and eventually return to them a foundation match based on their selection!
+            However, our team noticed that the associated web app, “TensorShade,”
+            had several accessibility issues, including a lack of color contrast
+            and alternative image text. We also noticed that there were several
+            issues that, from a user perspective, we did not understand. Such as
+            the slightly too-pink hue from the user choosing a specific place on
+            their face to “swatch.” Overall, “TensorShade” was a great starting
+            point for us, but in the end, we took time to improve the functionality
+            to our desired state.
+        </p>
 
     </section>
 
     <section>
         <h2>Methodology</h2>
-        <p> We implemented this webpage, created the filters for foundation swatches and incorporated the TensorShade into one central location. We utilized VSCode and github to code and connect everything and our code was in Python, HTML.</p>
         <!-- Include about 3 paragraphs here
         What did you do in your project? What did you design or implement? What role did people with disabilities play in this, if any? -->
+        <p>
+            There were several aspects to our project, which we decided to split
+            up into smaller subtasks to hit our set milestones and goals progressively.
+            First, Catalina set up a Github Repository as a centralized and organized
+            place for everyone to contribute to the project. From there, Nancy implemented
+            the skeleton of our team website using HTML and VSCode. From there,
+            Catalina, who previously worked on creating filters on images through
+            the Computer Vision course offered at the Allen School, ensured our
+            images utilized the correct filters for the foundation swatches. The
+            filters were developed through Python. At this point in our project,
+            our team felt we had made sufficient progress, so Nora and Nancy stepped
+            in and began working on the CSS portion. They both added more functionality
+            and, overall, ensured a cohesive feeling to the website.
+        </p>
+        <p>
+            We noticed several parts of our project were complete, but we couldn't
+            see them displayed on the front end, so Ruth stepped in! She connected
+            the back-end portion (the filtered images) to the front end. As a result,
+            we could see the two filtered images on our HTML skeleton. Next, Catalina
+            took the lead on improving the machine learning model in “TensorShade.”
+            This included having the machine learning model find much closer foundation
+            matches than it previously found. Catalina also ensured that the CSS matched
+            our current website theme since “TensorShade” originally had several
+            contrast issues.
+        </p>
+        <p>
+            Last but not least, we had intended to test our project on color-blind
+            individuals, but due to time constraints, we could not accomplish this task.
+            However, we placed our images through an online color-blind simulator.
+            Through this simulation, we analyzed how different types of color blindness
+            will see our output filtered images.
+        </p>
     </section>
 
     <section>
