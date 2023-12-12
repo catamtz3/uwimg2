@@ -122,13 +122,36 @@
 
     <section>
         <h2>Disability Justice Perspective</h2>
-        <p>How did a disability studies perspective inform your project?</p>
         <!-- Include 1 paragraph here -->
+        <p>
+            Shade-matching makeup can be complex, especially for color-blind individuals,
+            since it is difficult to visually identify specific levels of contrast/matching.
+            However, this barrier shouldn't stop people from being able to use makeup.
+        </p>
+        <p>
+            Intersectionality as a justice principle means understanding the experiences
+            of a disabled person and how they interact with other parts of their
+            identity like race, class, sexuality, age, religious background, geographical
+            location, immigration status, and more. This project connects to this
+            justice principle because makeup is a form of gender expression for many,
+            and disabled people, specifically those who have color vision deficiencies,
+            should be able to express their gender identity without structural barriers
+            limiting their access to makeup.
+        </p>
+        <p>
+            Recognizing wholeness as a justice principle means understanding that
+            disabled people are whole people living their experiences with their
+            thoughts, pleasures, emotions, etc. This relates to our project because
+            people with color vision deficiencies should be able to express themselves
+            with makeup. Color-blind individuals might face challenges perceiving
+            makeup shades, but this doesn't diminish their desire for self-expression
+            or participation in activities like makeup artistry. By recognizing
+            this, we can recognize their wholeness and desire to express themselves.
+        </p>
     </section>
 
     <section>
         <h2>Learnings and Future Work</h2>
-        <strong>Learnings</strong>
         <p>
             We learned that a few options were available to color match that we
             were unaware of, but they do not directly include support for color-blind
@@ -144,27 +167,36 @@
             shade.
         </p>
         <p>
-            Additionally, while our primary focus is on accessibility, we are still
-            missing several aspects. For example, our current implementation of a
-            foundation matching process requires users to visually notice if there
-            is a difference with the skin or not, which currently does not support
-            blind individuals. However, we did ensure that our program was accessible
-            to color-blind individuals by inputting our filtered images through
-            an online simulator. We analyzed how different versions of colorblindness
-            were seen and made sure that depth and undertones were still perceived
-            in our pictures.
+            One way this can be built on in the future by having the program tell
+            the user if the swatch they uploaded matches by analyzing the foundation
+            and the skin. Our current implementation of the swatch matching process
+            requires users to visually notice if there is a difference in color with
+            the filtered photos, which does not support blind individuals. Suppose
+            we were to add this feature, the result of whether the swatch matches
+            or not could be directly told to the user rather than having to be
+            visually cued.
         </p>
-
-        <strong>Future Considerations</strong>
-         <p> We learned </p>
-        <!-- Include 1-2 paragraphs here -->
     </section>
 
     <section>
         <h2>App Accessibility</h2>
-        <p>Describe how you made your app accessible.</p>
         <!-- Include 1-2 paragraphs here -->
         <!-- Optionally include UARS you found in an appendix -->
+        <p>
+            We prioritized accessibility through automated testing using the WAVE
+            extension, addressing issues like missing alt-text and labels. Manual
+            testing involved navigating the website with a screen reader, ensuring
+            a navigable and accessible interface. Aria-labels, alt-text, and specified
+            hierarchy were added to enhance the user experience. We also confirmed
+            that the website was navigable using only the keyboard. We also used
+            a color-blind simulator to ensure that the filtered images were accessible
+            to color-blind individuals. While a color-blind simulator is not a perfect
+            representation of how a color-blind individual would see the images,
+            it was a good starting point for us to ensure that the images were accessible
+            to color-blind individuals. We also confirmed we were being inclusive
+            by using a high-contrast color scheme and providing that the text was
+            large enough to read and, if zoomed in, would not overflow.
+        </p>
     </section>
 
     <footer>
