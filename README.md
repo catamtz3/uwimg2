@@ -1,11 +1,2 @@
-# Build Your Own Vision Library! #
-
-In this repository you will find instructions on how to build your own image processing/computer vision library from (mostly) scratch. The work is divided out into different homework assignments, found in the `src/` directory.
-
-To get started, make sure you have `git`, a C compiler, and `make` installed. Then run:
-
-    git clone https://github.com/pjreddie/uwimg
-    cd uwimg
-    make
-
-and check to see that everything compiles correctly. Then, to get started, open up the `README` for homework 0 in `src/hw0/README.md`, or view it [here](./src/hw0/README.md). Good luck and have fun!
+# OVERVIEW #
+Color matching makeup can seem like a nightmare for anyone. Unfortunately, this task can be even more daunting for people with color blindness. Some services, like color matching, require an individual to visit a store physically. However, physically visiting a store is unattainable for several communities, including those living in rural communities and lacking stores with color-matching services, those with inaccessible public transportation to the stores, or even because traveling can be incredibly tiring. Recognizing these individuals' unique challenges, we would like this program to simplify the color-matching process. Allowing individuals to upload an image of their skin, the program will provide users with a foundation match. Additionally, individuals can upload existing swatches and will be provided with filtered photos that better show the matching accuracy. With this information, we aim to make makeup an inclusive experience for all, regardless of experience level.
